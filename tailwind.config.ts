@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Eco Energia color palette
+				eco: {
+					'green-light': '#F2FCE2',
+					'green-dark': '#4CAF50',
+					'green-mid': '#8BC34A',
+					'blue-light': '#D3E4FD',
+					'blue-mid': '#33C3F0',
+					'blue-dark': '#2196F3',
 				}
 			},
 			borderRadius: {
@@ -84,12 +94,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.6' },
+				},
+				'spin-slow': {
+					to: { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 5s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+				'spin-slow': 'spin-slow 15s linear infinite'
+			},
+			backgroundImage: {
+				'gradient-eco': 'linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%)',
+				'gradient-solar': 'linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)',
+				'gradient-wind': 'linear-gradient(to top, #accbee 0%, #e7f0fd 100%)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
