@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { SolarPanel, BarChart, Battery } from 'lucide-react';
+import { Sun, BarChart, Battery } from 'lucide-react';
 
 const Simulator = () => {
   const [consumo, setConsumo] = useState(300);
@@ -28,7 +28,7 @@ const Simulator = () => {
           <div className="flex flex-col md:flex-row gap-6 mb-8">
             <div className="flex-1">
               <h3 className="text-xl font-bold mb-6 flex items-center gap-2 text-eco-green-dark">
-                <SolarPanel className="h-6 w-6" /> Simule sua Economia com Energia Solar
+                <Sun className="h-6 w-6" /> Simule sua Economia com Energia Solar
               </h3>
               
               <div className="space-y-6">
